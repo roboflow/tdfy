@@ -14,8 +14,9 @@ authors = [
 license = {text = "MIT"}
 dependencies = []  # Users handle all dependencies separately
 
-[tool.setuptools]
-packages = ["tdfy"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tdfy*"]
 
 [tool.setuptools.package-data]
 tdfy = [
