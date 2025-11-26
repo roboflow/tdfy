@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tdfy"
+version = "1.0.0"
+description = "SAM3D TDFY - 3D reconstruction models and pipelines"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "SAM3D Team"}
+]
+license = {text = "MIT"}
+dependencies = []  # Users handle all dependencies separately
+
+[tool.setuptools]
+packages = ["tdfy"]
+
+[tool.setuptools.package-data]
+tdfy = [
+    "sam3d_v1/checkpoints_configs/*.yaml",
+    "sam3d_v1/hub/**/*",
+]
