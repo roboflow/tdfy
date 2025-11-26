@@ -18,8 +18,8 @@ import seaborn as sns
 import copy
 
 # # TODO: Use these when we plot multiple instances in the scene
-# from lidra.data.dataset.tdfy.kubric.vis import get_instance_colors
-# from lidra.data.dataset.tdfy.kubric.vis import (
+# from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.vis import get_instance_colors
+# from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.vis import (
 #     segmentation_to_rgb,
 #     depth_to_rgb,
 #     html_show_instance_ids,

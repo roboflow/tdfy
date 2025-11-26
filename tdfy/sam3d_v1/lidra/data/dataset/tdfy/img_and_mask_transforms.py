@@ -811,7 +811,7 @@ def normalize_pointmap_ssi(
     Returns:
         Tuple of (normalized_pointmap, scale, shift)
     """
-    from lidra.data.dataset.tdfy.pose_target import ScaleShiftInvariant
+    from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import ScaleShiftInvariant
 
     # Convert to (H, W, 3) if needed for get_scale_and_shift
     if pointmap.shape[0] == 3:
@@ -843,7 +843,7 @@ def _apply_metric_to_ssi(
     Returns:
         Tuple of (normalized_pointmap, scale, shift)
     """
-    from lidra.data.dataset.tdfy.pose_target import ScaleShiftInvariant
+    from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import ScaleShiftInvariant
 
     # Convert to (H, W, 3) if needed for get_scale_and_shift
     if pointmap.shape[0] == 3:

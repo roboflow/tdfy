@@ -227,7 +227,7 @@ class TestPreferenceJobDataset(unittest.TestCase):
         )
 
         # Test load_rgb function directly since the dataset uses it
-        from lidra.data.dataset.tdfy.img_and_mask_transforms import load_rgb
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import load_rgb
 
         img_tensor = load_rgb("/fake/path.jpg")
 
@@ -402,14 +402,14 @@ class TestPreferenceJobDataset(unittest.TestCase):
             latent_loader_dataset=self.mock_latent_loader,
         )
 
-        from lidra.data.dataset.tdfy.img_and_mask_transforms import load_rgb
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import load_rgb
 
         with self.assertRaises(FileNotFoundError):
             load_rgb("/fake/path.jpg")
 
     def test_decode_mask_real_data(self):
         """Test decoding a real mask string"""
-        from lidra.data.dataset.tdfy.preference.decode_mask import decode_mask
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.preference.decode_mask import decode_mask
 
         # Real mask string from user
         real_mask_string = "JoAw2gFgjAHAenWBJAbAKXQVgLIGZsAs2ATAHJQDyADBcRVObafnZVVZQ7o5XTZ+3odyg3jyFt2UtrWqypzcgBkCaAOwiGUYZybbJ26u0McjhkwepttNY1funpt689umLo1-zOCOUn242Vvy+foGhQcYRogGxdnYW9GZJfkm6CSnmaSnuQt4C+YJkQbpkxcJlJExltCSkZLhK3I34BEqYSAAqAJYAagCqUEA"
@@ -670,7 +670,7 @@ class TestDecodeMask(unittest.TestCase):
 
     def test_decode_mask_basic_functionality(self):
         """Test basic decode_mask functionality"""
-        from lidra.data.dataset.tdfy.preference.decode_mask import decode_mask
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.preference.decode_mask import decode_mask
 
         decoded_mask = decode_mask(self.real_mask_string, 2250, 1500)
 
@@ -688,7 +688,7 @@ class TestDecodeMask(unittest.TestCase):
 
     def test_decode_mask_statistical_properties(self):
         """Test statistical properties of the decoded mask"""
-        from lidra.data.dataset.tdfy.preference.decode_mask import decode_mask
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.preference.decode_mask import decode_mask
 
         decoded_mask = decode_mask(self.real_mask_string, 2250, 1500)
 
@@ -716,7 +716,7 @@ class TestDecodeMask(unittest.TestCase):
 
     def test_decode_mask_compression_functions(self):
         """Test the underlying compression functions"""
-        from lidra.data.dataset.tdfy.preference.decode_mask import (
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.preference.decode_mask import (
             decompress_from_encoded_uri,
             get_base_value,
             KEYSTRURISAFE,
@@ -741,8 +741,8 @@ class TestRealDataPaths(unittest.TestCase):
     @run_only_if_path_exists("/fsx-3dfy-v2/shared/datasets/task2_generated_mesh")
     def test_real_metadata_loading(self):
         """Test loading with real metadata file"""
-        from lidra.data.dataset.tdfy.trellis.latent_loader import load_structure_latents
-        from lidra.data.dataset.tdfy.trellis.mesh_loader import load_trellis_mesh
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.latent_loader import load_structure_latents
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.mesh_loader import load_trellis_mesh
         from omegaconf import OmegaConf
         from hydra.utils import instantiate
 

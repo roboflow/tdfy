@@ -310,7 +310,7 @@ def coords_prediction_preprocess_fn(
     Returns:
         Dictionary with decoded shape volume and mapped remaining keys
     """
-    from lidra.metrics.tdfy.occupancy.pointcloud import create_occupancy_volume
+    from tdfy.sam3d_v1.lidra.metrics.tdfy.occupancy.pointcloud import create_occupancy_volume
 
     # Decode shape latent if present
     volumes = []
@@ -419,7 +419,7 @@ def extract_trial_prediction_from_inference_pipeline(
     Returns:
         Transformed prediction dict matching expected format
     """
-    from lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
+    from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
 
     data = extract_data(batch)
     pred = data["prediction"]

@@ -5,8 +5,17 @@ from tdfy.sam3d_v1.lidra.config.utils import RecursivePartial
 from tdfy.sam3d_v1.lidra.utils.device import get_auto_device
 
 
+_RESOLVERS_REGISTERED = False
+
 def register(resolver_fn):
-    OmegaConf.register_new_resolver(f"rv.{resolver_fn.__name__}", resolver_fn)
+    """Register a resolver only once, checking for duplicates."""
+    global _RESOLVERS_REGISTERED
+    resolver_name = f"rv.{resolver_fn.__name__}"
+
+    # Only register if not already registered
+    if not OmegaConf.has_resolver(resolver_name):
+        OmegaConf.register_new_resolver(resolver_name, resolver_fn)
+
     return resolver_fn
 
 
@@ -19,7 +28,7 @@ def partial(data, *, _node_, _parent_, _root_):
         )
 
     new_data = {
-        "_target_": "inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils.StrictPartial",
+        "_target_": "tdfy.sam3d_v1.lidra.config.utils.StrictPartial",
         "_args_": (data["_target_"],) + data.get("_args_", ()),
         **{k: v for k, v in data.items() if k not in {"_target_", "_args_"}},
     }
@@ -34,7 +43,7 @@ def rpartial(data, *, _node_, _parent_, _root_):
             "`partial` resolver cannot resolve a node missing the `_target_` field"
         )
     new_data = {
-        "_target_": "inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils.RecursivePartial",
+        "_target_": "tdfy.sam3d_v1.lidra.config.utils.RecursivePartial",
         "config": RecursivePartial.replace_keys(
             data, {"_target_": "_rpartial_target_"}
         ),
@@ -45,14 +54,14 @@ def rpartial(data, *, _node_, _parent_, _root_):
 
 @register
 def locate(path: str, *, _node_, _parent_, _root_):
-    return DictConfig({"_target_": "inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils.locate", "path": path})
+    return DictConfig({"_target_": "tdfy.sam3d_v1.lidra.config.utils.locate", "path": path})
 
 
 @register
 def getitem(data, key, *, _node_, _parent_, _root_):
     return DictConfig(
         {
-            "_target_": "inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils.get_item",
+            "_target_": "tdfy.sam3d_v1.lidra.config.utils.get_item",
             "data": data,
             "key": key,
         },
@@ -64,7 +73,7 @@ def getitem(data, key, *, _node_, _parent_, _root_):
 def getattr(data, key, *, _node_, _parent_, _root_):
     return DictConfig(
         {
-            "_target_": "inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils.get_attr",
+            "_target_": "tdfy.sam3d_v1.lidra.config.utils.get_attr",
             "data": data,
             "key": key,
         },
@@ -76,7 +85,7 @@ def getattr(data, key, *, _node_, _parent_, _root_):
 def freeze(data, *, _node_, _parent_, _root_):
     return DictConfig(
         {
-            "_target_": "inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.model.freeze",
+            "_target_": "tdfy.sam3d_v1.lidra.config.model.freeze",
             "model": data,
         },
         parent=_parent_,

@@ -4,6 +4,8 @@ import torch
 from pathlib import Path
 import os
 import re
+import sys
+from contextlib import contextmanager
 from loguru import logger
 from lightning.pytorch.utilities.consolidate_checkpoint import (
     _format_checkpoint,
@@ -12,6 +14,53 @@ from lightning.pytorch.utilities.consolidate_checkpoint import (
 from glob import glob
 
 from tdfy.sam3d_v1.lidra.data.utils import get_child, set_child
+
+
+@contextmanager
+def _temporary_module_aliases():
+    """Context manager that temporarily creates module aliases for checkpoint loading.
+
+    This is used to load checkpoints that were pickled with old 'lidra' module paths.
+    The aliases are only active during the context and are cleaned up afterwards,
+    preventing global namespace pollution.
+    """
+    # Store original sys.modules state
+    original_modules = {}
+    added_modules = []
+
+    try:
+        # Create temporary aliases: lidra.* -> tdfy.sam3d_v1.lidra.*
+        new_prefix = 'tdfy.sam3d_v1.lidra'
+        old_prefix = 'lidra'
+
+        # For all currently loaded tdfy modules, create temporary aliases
+        for module_name in list(sys.modules.keys()):
+            if module_name.startswith(new_prefix):
+                old_name = module_name.replace(new_prefix, old_prefix, 1)
+                if old_name not in sys.modules:
+                    # Store that we added this
+                    added_modules.append(old_name)
+                else:
+                    # Store original value to restore later
+                    original_modules[old_name] = sys.modules[old_name]
+                sys.modules[old_name] = sys.modules[module_name]
+
+        # Also create the base 'lidra' alias if needed
+        if 'lidra' not in added_modules and 'lidra' not in original_modules:
+            if 'tdfy.sam3d_v1.lidra' in sys.modules:
+                added_modules.append('lidra')
+                sys.modules['lidra'] = sys.modules['tdfy.sam3d_v1.lidra']
+
+        yield
+
+    finally:
+        # Clean up: remove added modules and restore originals
+        for module_name in added_modules:
+            if module_name in sys.modules:
+                del sys.modules[module_name]
+
+        for module_name, original_module in original_modules.items():
+            sys.modules[module_name] = original_module
 
 
 # TODO(Pierre) : Make a version working as a "state_dict_fn" filter ?
@@ -157,16 +206,21 @@ def load_model_from_checkpoint(
     state_dict_fn: Optional[Callable[[Any], Any]] = None,
 ):
     logger.info(f"Loading checkpoint from {checkpoint_path}")
-    if os.path.isfile(checkpoint_path):
-        checkpoint = torch.load(
-            checkpoint_path,
-            map_location=device,
-            weights_only=False,
-        )
-    elif os.path.isdir(checkpoint_path):  # sharded
-        checkpoint = load_sharded_checkpoint(checkpoint_path, device=device)
-    else:  # if neither a file nor a directory, path does not exist
-        raise FileNotFoundError(checkpoint_path)
+
+    # Use temporary module aliases to load checkpoints with old 'lidra' paths
+    # This ensures the aliases are only active during unpickling and don't pollute
+    # the global namespace
+    with _temporary_module_aliases():
+        if os.path.isfile(checkpoint_path):
+            checkpoint = torch.load(
+                checkpoint_path,
+                map_location=device,
+                weights_only=False,
+            )
+        elif os.path.isdir(checkpoint_path):  # sharded
+            checkpoint = load_sharded_checkpoint(checkpoint_path, device=device)
+        else:  # if neither a file nor a directory, path does not exist
+            raise FileNotFoundError(checkpoint_path)
 
     if isinstance(model, pl.LightningModule):
         model.on_load_checkpoint(checkpoint)

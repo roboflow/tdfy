@@ -183,7 +183,7 @@ class KubricMultiObjInFrameDataset(torch.utils.data.Dataset):
                 )
             except ValueError as e:
                 logger.warning(f"Caught exception in KubricMultiObjInFrameDataset {e}")
-                # from lidra.data.collator import auto_uncollate
+                # from tdfy.sam3d_v1.lidra.data.collator import auto_uncollate
                 if self.dataset.random_frame_selection:
                     new_idx = torch.randint(0, len(self.dataset), (1,))
                 else:

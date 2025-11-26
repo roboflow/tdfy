@@ -293,7 +293,7 @@ class TestPoseTarget(unittest.TestCase):
         )
 
         # Convert GT to pose target using Identity (simulates fill_missing_pose_target_keys)
-        from lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
         from dataclasses import asdict
 
         gt_as_pose_target_dict = PoseTargetConverter.dicts_instance_pose_to_pose_target(
@@ -576,7 +576,7 @@ class TestDisparitySpace(unittest.TestCase):
 
     def test_disparity_space_with_converter(self):
         """Test DisparitySpace using PoseTargetConverter utility"""
-        from lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
+        from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
 
         # Create instance pose
         instance_pose = InstancePose(
