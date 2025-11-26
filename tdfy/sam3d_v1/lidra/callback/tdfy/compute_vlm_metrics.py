@@ -6,26 +6,26 @@ from lightning.pytorch.callbacks import Callback
 from lightning.pytorch import LightningModule, Trainer
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.collator import auto_uncollate
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import (
+from tdfy.sam3d_v1.lidra.data.collator import auto_uncollate
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import (
     extract_sample_uuid,
     extract_data,
     SampleUuidUtils,
     AbstractDatasetReturnType,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.visualization.image_mask import get_masked_sample_cv2
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import (
+from tdfy.sam3d_v1.lidra.utils.visualization.image_mask import get_masked_sample_cv2
+from tdfy.sam3d_v1.lidra.data.utils import (
     build_batch_extractor,
     empty_mapping,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.metric_collection_per_sample import (
+from tdfy.sam3d_v1.lidra.metrics.tdfy.metric_collection_per_sample import (
     TdfyPerSample,
     NanFoundInMetricException,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConvention
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.vlmscore import GPTScorer
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.callback.tdfy.compute_metrics import TdfySingleTrialMetricsCallback
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConvention
+from tdfy.sam3d_v1.lidra.metrics.tdfy.vlmscore import GPTScorer
+from tdfy.sam3d_v1.lidra.callback.tdfy.compute_metrics import TdfySingleTrialMetricsCallback
 
 
 class TdfySingleTrialVLMMetricsCallback(TdfySingleTrialMetricsCallback):

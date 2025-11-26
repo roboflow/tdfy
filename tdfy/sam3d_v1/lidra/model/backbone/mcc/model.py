@@ -1,9 +1,9 @@
 import torch
 from functools import partial
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.mcc.encoder import ImageEncoder
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.mcc.decoder import DensityDecoder, DecoderBlock
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.mcc.common import Transformer, Block
+from tdfy.sam3d_v1.lidra.model.backbone.mcc.encoder import ImageEncoder
+from tdfy.sam3d_v1.lidra.model.backbone.mcc.decoder import DensityDecoder, DecoderBlock
+from tdfy.sam3d_v1.lidra.model.backbone.mcc.common import Transformer, Block
 
 
 def square_image(image):

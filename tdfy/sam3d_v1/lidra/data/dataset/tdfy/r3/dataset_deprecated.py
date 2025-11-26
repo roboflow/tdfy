@@ -15,7 +15,7 @@ from pytorch3d.renderer import PerspectiveCameras, look_at_view_transform
 from pytorch3d.structures import Meshes
 from scipy.spatial.transform import Rotation as SciR
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.base_obj_in_scene_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.base_obj_in_scene_dataset import (
     ObjInSceneSingleSceneDataset,
 )
 

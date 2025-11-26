@@ -2,10 +2,10 @@ import torch
 import random
 from pytorch3d.structures.pointclouds import Pointclouds
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.chamfer import ChamferDistance
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.precision_recall import PrecisionRecall
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.tdfy.util import (
+from tdfy.sam3d_v1.lidra.metrics.chamfer import ChamferDistance
+from tdfy.sam3d_v1.lidra.metrics.precision_recall import PrecisionRecall
+from tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
+from tdfy.sam3d_v1.lidra.model.module.tdfy.util import (
     construct_uniform_cube,
     aug_xyz,
     shrink_points_beyond_threshold,

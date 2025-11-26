@@ -1,7 +1,7 @@
 import unittest
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 
 
 class UnitTests(unittest.TestCase):

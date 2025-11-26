@@ -1,7 +1,7 @@
 import numpy as np
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.utils.random_utils import sphere_hammersley_sequence
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.utils.random_utils import sphere_hammersley_sequence
 
 
 # TODO(Pierre) expose relevant parameters when needed

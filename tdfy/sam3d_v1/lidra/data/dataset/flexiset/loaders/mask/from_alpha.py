@@ -1,5 +1,5 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.rgba import RGBA
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.rgba import RGBA
 
 
 class FromAlpha(Base):

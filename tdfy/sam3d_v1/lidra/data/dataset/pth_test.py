@@ -2,8 +2,8 @@ import os
 import torch
 import unittest
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, temporary_directory
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.pth import Pth
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, temporary_directory
+from tdfy.sam3d_v1.lidra.data.dataset.pth import Pth
 
 
 # TODO(Pierre) : add more tests

@@ -6,10 +6,10 @@ from typing import Union
 from PIL import Image
 from omegaconf import OmegaConf
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline import preprocess_utils
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_utils import (
+from tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
+from tdfy.sam3d_v1.lidra.pipeline import preprocess_utils
+from tdfy.sam3d_v1.lidra.pipeline.inference_utils import (
     voxelize_mesh,
     trimesh2o3d_mesh,
 )

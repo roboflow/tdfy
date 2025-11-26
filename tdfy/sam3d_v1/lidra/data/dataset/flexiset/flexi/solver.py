@@ -3,7 +3,7 @@ from collections import namedtuple
 from loguru import logger
 import inspect
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
 
 EXPLORE_STATE = 0
 REGISTER_STATE = 1

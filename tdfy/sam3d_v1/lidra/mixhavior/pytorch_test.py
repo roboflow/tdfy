@@ -1,10 +1,10 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, temporary_file
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.model import MockMLP
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior as mixhavior
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior.pytorch import PyTorchMixhaviorStateDictHandling
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, temporary_file
+from tdfy.sam3d_v1.lidra.test.model import MockMLP
+import tdfy.sam3d_v1.lidra.mixhavior as mixhavior
+from tdfy.sam3d_v1.lidra.mixhavior.pytorch import PyTorchMixhaviorStateDictHandling
 
 
 class BehaviorA(mixhavior.Behavior):

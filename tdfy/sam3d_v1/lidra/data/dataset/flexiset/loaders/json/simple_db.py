@@ -1,7 +1,7 @@
 import os
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.json.from_file import FromFile
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.json.from_file import FromFile
 
 
 class SimpleDB(Base):

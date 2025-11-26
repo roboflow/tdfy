@@ -10,7 +10,7 @@ from sklearn.metrics import (
 from torch import Tensor
 from torchmetrics import Metric
 from dataclasses import dataclass
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.tdfy.util import torch_or_numpy
+from tdfy.sam3d_v1.lidra.model.module.tdfy.util import torch_or_numpy
 
 
 def f1_beta_score(precision, recall, beta=1.0, remove_nans=True):

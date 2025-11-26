@@ -3,13 +3,13 @@ import random
 import numpy as np
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.base_scene_dataset import BaseSceneDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.base_scene_dataset import BaseSceneDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import (
     preprocess_img,
     pad_to_square_centered,
     crop_img_to_obj,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import (
     normalize_objects_in_cam,
     get_rgbd_points,
 )

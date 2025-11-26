@@ -1,4 +1,4 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.args import Args
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.args import Args
 
 
 class Base:

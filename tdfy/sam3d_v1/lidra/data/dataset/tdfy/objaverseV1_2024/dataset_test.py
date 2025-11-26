@@ -2,15 +2,15 @@ import os
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverseV1_2024.anything_dataset import AnythingDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverseV1_2024.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverseV1_2024.anything_dataset import AnythingDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverseV1_2024.dataset import (
     ObjaverseV1_2024Dataset,
     ObjaverseV1_2024SampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_pose_objaversev1old
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_pose_objaversev1old
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
 from torchvision.transforms import Compose, Resize
 
 

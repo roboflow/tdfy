@@ -1,11 +1,11 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.occupancy.pointcloud import (
+from tdfy.sam3d_v1.lidra.metrics.tdfy.occupancy.pointcloud import (
     create_occupancy_volume,
     occupancy_grid_to_local_points,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import OverwriteTensorEquality
+from tdfy.sam3d_v1.lidra.test.util import OverwriteTensorEquality
 
 
 class TestPointCloudOccupancy(unittest.TestCase):

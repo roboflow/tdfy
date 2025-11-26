@@ -9,7 +9,7 @@ from typing import List, Optional, Tuple, Type
 import torch
 from torch import nn
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import LayerNorm2d, MLP
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import LayerNorm2d, MLP
 from loguru import logger
 
 

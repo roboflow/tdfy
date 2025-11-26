@@ -4,8 +4,8 @@ import os
 from typing import Union, Sequence
 from copy import copy
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.set import Set as FlexiSet
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.set import Set as FlexiSet
 
 # loader = extract information from information
 # transform = change existing information into new information

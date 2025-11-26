@@ -22,9 +22,9 @@ from ..img_and_mask_transforms import (
     SSIPointmapNormalizer,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import ScaleShiftInvariant
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
+from tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import ScaleShiftInvariant
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
     compose_transform,
     get_rotation_about_x_axis,
 )

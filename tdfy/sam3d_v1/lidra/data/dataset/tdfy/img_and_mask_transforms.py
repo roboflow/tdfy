@@ -5,8 +5,8 @@ from typing import Optional, Dict
 import numpy as np
 import matplotlib.pyplot as plt
 import torchvision.transforms.functional
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.point_remapper import PointRemapper
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.point_remapper import PointRemapper
 from typing import Optional, Dict
 from loguru import logger
 import torch
@@ -16,7 +16,7 @@ import torchvision.transforms as tv_transforms
 import torchvision.transforms.functional
 import torchvision.transforms.functional as TF
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
 
 
 def UNNORMALIZE(mean, std):

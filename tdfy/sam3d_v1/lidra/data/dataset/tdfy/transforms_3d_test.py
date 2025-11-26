@@ -3,7 +3,7 @@ import torch
 import pytorch3d.transforms
 from pytorch3d.transforms import matrix_to_quaternion
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
     compose_transform,
     decompose_transform,
 )

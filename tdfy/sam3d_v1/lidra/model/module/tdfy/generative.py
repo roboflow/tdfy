@@ -5,28 +5,28 @@ from tqdm import tqdm
 
 from lightning.pytorch.loggers import WandbLogger
 from lightning.pytorch.utilities.rank_zero import WarningCache, rank_zero_warn
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.utils import _get_total_norm
+from tdfy.sam3d_v1.lidra.model.utils import _get_total_norm
 from loguru import logger
 import optree
 import skimage.io as io
 import torch
 from pytorch3d.transforms import quaternion_to_matrix, matrix_to_quaternion
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone, BackboneWithBenefits
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import DiagonalGaussianDistribution
+from tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone, BackboneWithBenefits
+from tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import DiagonalGaussianDistribution
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import (
+from tdfy.sam3d_v1.lidra.data.utils import (
     build_batch_extractor,
     empty_mapping,
     tree_reduce_unique,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_data, extract_sample_uuid
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_data, extract_sample_uuid
 
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.tdfy.batch_transform_utils.trellis as trellis_batch_transform_utils
+import tdfy.sam3d_v1.lidra.model.module.tdfy.batch_transform_utils.trellis as trellis_batch_transform_utils
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import InstancePose, PoseTargetConverter
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import DecomposedTransform
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import LogScaleShiftNormalizer
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import InstancePose, PoseTargetConverter
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import DecomposedTransform
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import LogScaleShiftNormalizer
 
 warning_cache = WarningCache()
 

@@ -10,10 +10,10 @@ import torch
 from pytorch3d.renderer import PerspectiveCameras
 from pytorch3d.transforms import Transform3d
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset import get_subdirs
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import get_rgbd_points
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset import get_subdirs
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import get_rgbd_points
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
     convert_to_decoupled_instance_pose,
 )
 

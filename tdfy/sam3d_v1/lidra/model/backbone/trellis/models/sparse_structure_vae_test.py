@@ -1,12 +1,12 @@
 import unittest
 import hydra
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
+from tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
 from omegaconf import OmegaConf
 import torch
 import os
 from hydra.utils import instantiate
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import (
+from tdfy.sam3d_v1.lidra.test.util import (
     run_unittest,
     run_only_if_cuda_is_available,
     run_only_if_path_exists,

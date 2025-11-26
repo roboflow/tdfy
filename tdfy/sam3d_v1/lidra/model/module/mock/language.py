@@ -1,6 +1,6 @@
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
+from tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
 
 
 class Language(Base):

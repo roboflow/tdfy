@@ -11,21 +11,21 @@ import skimage.io as io
 import torch
 import torch.nn.functional as F
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone, BackboneWithBenefits
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import DiagonalGaussianDistribution
+from tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone, BackboneWithBenefits
+from tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import DiagonalGaussianDistribution
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import (
+from tdfy.sam3d_v1.lidra.data.utils import (
     build_batch_extractor,
     empty_mapping,
     tree_reduce_unique,
     get_child,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_data, extract_sample_uuid
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_data, extract_sample_uuid
 
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.tdfy.batch_transform_utils.trellis as trellis_batch_transform_utils
+import tdfy.sam3d_v1.lidra.model.module.tdfy.batch_transform_utils.trellis as trellis_batch_transform_utils
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import InstancePose, PoseTargetConverter
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import DecomposedTransform
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import InstancePose, PoseTargetConverter
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import DecomposedTransform
 
 warning_cache = WarningCache()
 

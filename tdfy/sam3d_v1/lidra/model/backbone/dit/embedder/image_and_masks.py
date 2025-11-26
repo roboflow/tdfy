@@ -3,7 +3,7 @@ import warnings
 from loguru import logger
 from torch import nn
 from typing import Optional
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.layers.llama3.ff import FeedForward
+from tdfy.sam3d_v1.lidra.model.layers.llama3.ff import FeedForward
 
 
 class ImageAndMasks(torch.nn.Module):

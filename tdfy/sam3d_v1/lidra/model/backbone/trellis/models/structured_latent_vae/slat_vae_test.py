@@ -4,8 +4,8 @@ import torch
 import os
 from hydra.utils import instantiate
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.modules import sparse as sp
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.modules import sparse as sp
 
 
 class UnitTests(unittest.TestCase):

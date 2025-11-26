@@ -3,11 +3,11 @@ from typing import Union
 import torch
 from torch.utils.data import Dataset
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverseV1_2024.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverseV1_2024.dataset import (
     ObjaverseV1_2024Dataset,
     ObjaverseV1_2024SampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset_deprecated import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset_deprecated import (
     PerSubsetDataset as TrellisPerSubsetDataset,
 )
 

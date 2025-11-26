@@ -4,10 +4,10 @@ import numpy as np
 import torch
 from torch import nn
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.layers.drop_path import DropPath
+from tdfy.sam3d_v1.lidra.model.layers.drop_path import DropPath
 from timm.models.vision_transformer import Block, Mlp, DropPath
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.mcc.common import Transformer
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.mcc.decoder import LayerScale
+from tdfy.sam3d_v1.lidra.model.backbone.mcc.common import Transformer
+from tdfy.sam3d_v1.lidra.model.backbone.mcc.decoder import LayerScale
 
 
 def create_autoencoder(

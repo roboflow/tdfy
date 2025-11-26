@@ -1,36 +1,36 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.ops.copy import Copy
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.latent.sparse_latent import SparseLatent
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.latent.structured_latent import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.ops.copy import Copy
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.latent.sparse_latent import SparseLatent
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.latent.structured_latent import (
     StructuredLatent,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.trellis.mesh import Mesh as TrellisMesh
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.pytorch3d.faces import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.trellis.mesh import Mesh as TrellisMesh
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.pytorch3d.faces import (
     Faces as TrellisFaces,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.pytorch3d.vertices import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.pytorch3d.vertices import (
     Vertices as TrellisVertices,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.pointmap.pointmap import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.pointmap.pointmap import (
     Pointmap,
     PointmapScale,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.rgb import RGB
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.rgba import RGBA
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mask.from_alpha import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.rgb import RGB
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.rgba import RGBA
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mask.from_alpha import (
     FromAlpha as MaskFromAlpha,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.view.random_view_path_and_pose import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.view.random_view_path_and_pose import (
     RandomViewPathAndPose,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.local_path import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.local_path import (
     LocalPath as MeshLocalPath,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.view.random_view import RandomViews
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.rendering.blender import Blender
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.view.random_view import RandomViews
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.rendering.blender import Blender
 
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_trellis_pose
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_trellis_pose
 
 
 def all_loaders(

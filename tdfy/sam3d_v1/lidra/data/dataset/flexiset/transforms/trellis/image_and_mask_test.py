@@ -3,10 +3,10 @@ import torch
 from unittest.mock import Mock, MagicMock
 from typing import Tuple
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.trellis.image_and_mask import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.trellis.image_and_mask import (
     ImageAndMaskMess,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
 
 
 class TestImageAndMaskMess(unittest.TestCase):

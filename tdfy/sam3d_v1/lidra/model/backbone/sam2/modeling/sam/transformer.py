@@ -12,11 +12,11 @@ import torch
 import torch.nn.functional as F
 from torch import nn, Tensor
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.position_encoding import (
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.position_encoding import (
     apply_rotary_enc,
     compute_axial_cis,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import MLP
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import MLP
 
 
 class TwoWayTransformer(nn.Module):

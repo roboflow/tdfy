@@ -9,7 +9,7 @@ from ..modules.utils import FP16_TYPE
 from ..modules.transformer import (
     MOTModulatedTransformerCrossBlock,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import (
+from tdfy.sam3d_v1.lidra.data.utils import (
     tree_reduce_unique,
 )
 from .timestep_embedder import TimestepEmbedder

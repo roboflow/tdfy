@@ -1,8 +1,8 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import KLAutoEncoder
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import KLAutoEncoder
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 
 
 class UnitTests(unittest.TestCase):

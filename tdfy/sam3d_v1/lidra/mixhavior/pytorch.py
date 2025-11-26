@@ -1,7 +1,7 @@
 import copy
 import torch
 
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior as mixhavior
+import tdfy.sam3d_v1.lidra.mixhavior as mixhavior
 
 
 # equiping a module with that behavior allows the serialization

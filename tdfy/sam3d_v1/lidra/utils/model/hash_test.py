@@ -2,9 +2,9 @@ import copy
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.model.hash import hash_module, diff_hashed_model
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.model import MockMLP
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.utils.model.hash import hash_module, diff_hashed_model
+from tdfy.sam3d_v1.lidra.test.model import MockMLP
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 
 
 class UnitTests(unittest.TestCase):

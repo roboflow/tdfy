@@ -1,4 +1,4 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.dataset import (
     KubricDataset,
     get_cam_K,
     KubricDatasetSampleID,
@@ -9,7 +9,7 @@ from typing import List, Dict, Optional, Union
 import trimesh
 from collections import namedtuple
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.mesh import convert_trimesh_to_pt3d
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.mesh import convert_trimesh_to_pt3d
 from pytorch3d.ops import sample_points_from_meshes
 
 

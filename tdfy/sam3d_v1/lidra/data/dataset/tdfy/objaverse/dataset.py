@@ -5,8 +5,8 @@ import trimesh
 from loguru import logger
 
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.loaders.surface import load_surface_points
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.loaders.surface import load_surface_points
+from tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
 
 
 class Dataset(torch.utils.data.Dataset):

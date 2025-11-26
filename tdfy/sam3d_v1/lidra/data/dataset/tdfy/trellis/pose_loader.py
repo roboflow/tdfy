@@ -13,12 +13,12 @@ from pytorch3d.io import load_ply
 from loguru import logger
 from typing import Dict, Tuple, Optional
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
     compose_transform,
     decompose_transform,
     DecomposedTransform,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.utils import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.utils import (
     blender2pytorch3d,
 )
 from .mesh_loader import load_trellis_mesh

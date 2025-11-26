@@ -2,7 +2,7 @@ import unittest
 import torch
 import numpy as np
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import (
     pad_to_square_centered,
     random_pad,
 )

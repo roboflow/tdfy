@@ -12,9 +12,9 @@ import numpy as np
 import torch
 from PIL.Image import Image
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_base import SAM2Base
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_base import SAM2Base
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.utils.transforms import SAM2Transforms
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.utils.transforms import SAM2Transforms
 
 
 class SAM2ImagePredictor:

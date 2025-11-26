@@ -1,6 +1,6 @@
 from pytorch3d.implicitron.dataset.dataset_base import FrameData
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.collator import remove_empty_items_from_batch
+from tdfy.sam3d_v1.lidra.data.collator import remove_empty_items_from_batch
 
 
 def collate_fn(batch):

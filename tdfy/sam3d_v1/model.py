@@ -32,8 +32,8 @@ import certifi
 # WARNING: DO NOT IMPORT ANYTHING THAT MIGHT LOAD CUDA_VISIBLE_DEVICES, NO IMPORT lidra!!!!
 def import_torch_and_inference():
     import torch
-    from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
-    from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.profiler.timeit import timeit
+    from tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
+    from tdfy.sam3d_v1.lidra.profiler.timeit import timeit
 
     return torch, InferencePipeline, timeit
 

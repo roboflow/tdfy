@@ -3,11 +3,11 @@ from typing import List, Dict, Optional, Union
 import torch
 from torch.utils.data import Dataset
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset import (
     Artist3DDataset,
     Artist3DDatasetSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import BoundingBoxError
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import BoundingBoxError
 from loguru import logger
 
 

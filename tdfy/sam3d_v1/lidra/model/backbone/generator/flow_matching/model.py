@@ -5,10 +5,10 @@ from functools import partial
 import optree
 import math
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map, tree_reduce_unique
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.flow_matching.solver import (
+from tdfy.sam3d_v1.lidra.model.backbone.generator.base import Base
+from tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
+from tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map, tree_reduce_unique
+from tdfy.sam3d_v1.lidra.model.backbone.generator.flow_matching.solver import (
     ODESolver,
     Euler,
     Midpoint,

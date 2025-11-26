@@ -1,7 +1,7 @@
 from pytorch3d.io import IO
 from pytorch3d.io.experimental_gltf_io import MeshGlbFormat
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
 
 
 class Mesh(Base):

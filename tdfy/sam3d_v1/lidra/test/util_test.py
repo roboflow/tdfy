@@ -9,7 +9,7 @@ import unittest
 
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import (
+from tdfy.sam3d_v1.lidra.test.util import (
     OverwriteTensorEquality,
     temporary_directory,
     temporary_file,

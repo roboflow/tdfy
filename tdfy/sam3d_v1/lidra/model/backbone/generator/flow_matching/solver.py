@@ -2,7 +2,7 @@ import optree
 import torch
 from functools import partial
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map
+from tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map
 
 
 def linear_approximation_step(x_t, dt, velocity):

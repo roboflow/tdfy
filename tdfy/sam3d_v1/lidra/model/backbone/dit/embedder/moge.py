@@ -1,7 +1,7 @@
 import torch
 import warnings
 from moge.model.v1 import MoGeModel
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.dino import Dino
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.dino import Dino
 import os
 from loguru import logger
 

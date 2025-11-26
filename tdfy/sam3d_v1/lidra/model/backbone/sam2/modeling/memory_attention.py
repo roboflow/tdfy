@@ -9,9 +9,9 @@ from typing import Optional
 import torch
 from torch import nn, Tensor
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.transformer import RoPEAttention
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.transformer import RoPEAttention
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import get_activation_fn, get_clones
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import get_activation_fn, get_clones
 
 
 class MemoryAttentionLayer(nn.Module):

@@ -2,7 +2,7 @@ import torch
 import numpy as np
 import matplotlib.pyplot as plt
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
 
 
 # TODO(Pierre) probably want to make the dtype, value range and channel order configurable

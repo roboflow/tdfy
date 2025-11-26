@@ -5,16 +5,16 @@ from pytorch3d.transforms import quaternion_to_matrix
 import torch
 from torch.utils.data import Dataset
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.dataset import (
     ADTDataset,
     ADTDatasetSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import BoundingBoxError
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import BoundingBoxError
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
     compose_transform,
     decompose_transform,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
     convert_to_decoupled_instance_pose,
 )
 from loguru import logger

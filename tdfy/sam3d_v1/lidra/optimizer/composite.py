@@ -5,7 +5,7 @@ import torch
 from torch.optim import Optimizer
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import OverwriteTensorEquality
+from tdfy.sam3d_v1.lidra.test.util import OverwriteTensorEquality
 
 
 class Composite(Optimizer):

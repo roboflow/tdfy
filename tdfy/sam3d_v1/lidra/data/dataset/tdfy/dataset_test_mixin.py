@@ -5,18 +5,18 @@ import torch
 import pytorch_lightning as pl
 import pytorch_lightning.utilities.seed as pl_seed
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import TrellisDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import TrellisDataset
+from tdfy.sam3d_v1.lidra.test.util import (
     run_unittest,
     run_only_if_path_exists,
     OverwriteTensorEquality,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import IMAGENET_UNNORMALIZATION
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import IMAGENET_UNNORMALIZATION
+from tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
 from hydra import initialize_config_dir, compose
 from hydra.utils import instantiate
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import (
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import (
     extract_data,
     extract_sample_uuid,
     SampleUuidUtils,

@@ -2,7 +2,7 @@ import unittest
 import torch
 import logging
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import (
     PoseTarget,
     InstancePose,
     InvariantPoseTarget,

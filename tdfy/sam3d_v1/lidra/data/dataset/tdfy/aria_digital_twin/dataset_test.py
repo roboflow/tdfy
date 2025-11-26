@@ -2,21 +2,21 @@ import os
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import (
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import (
     extract_data,
     extract_sample_uuid,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.anything_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.anything_dataset import (
     AnythingDataset as ADTAnythingDataset,
     ADTAnythingSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.dataset import ADTDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset_test import identify_base_dir
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.dataset import ADTDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset_test import identify_base_dir
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 from torchvision.transforms import Compose, Resize
 
 

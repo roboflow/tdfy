@@ -1,7 +1,7 @@
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.from_file import FromFile
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.image.from_file import FromFile
 
 
 class RGB(Base):

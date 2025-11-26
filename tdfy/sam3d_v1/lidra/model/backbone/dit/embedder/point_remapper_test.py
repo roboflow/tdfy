@@ -1,6 +1,6 @@
 import unittest
 import torch
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.point_remapper import PointRemapper
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.point_remapper import PointRemapper
 
 
 class TestPointRemapper(unittest.TestCase):

@@ -1,8 +1,8 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.collator import auto_collate, auto_uncollate
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, OverwriteTensorEquality
+from tdfy.sam3d_v1.lidra.data.collator import auto_collate, auto_uncollate
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, OverwriteTensorEquality
 
 
 class UnitTests(unittest.TestCase):

@@ -3,8 +3,8 @@ from typing import Dict, Optional, Tuple, Any
 from dataclasses import dataclass, asdict, field
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import expand_as_right, tree_tensor_map
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import compose_transform, decompose_transform
+from tdfy.sam3d_v1.lidra.data.utils import expand_as_right, tree_tensor_map
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import compose_transform, decompose_transform
 from pytorch3d.transforms import Transform3d, quaternion_to_matrix, matrix_to_quaternion
 
 

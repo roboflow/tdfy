@@ -5,9 +5,9 @@ import torch.nn as nn
 import lightning.pytorch as pl
 from functools import partial
 from torch.utils.data import DataLoader, TensorDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.callback.tdfy.adaptive_gradient_clipping import AdaptiveGradientClipCallback
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.callback.tdfy.gradual_grad_scale import GradualGradScaleCallback
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.callback.tdfy.memory_manager import MemoryManagerCallback, set_grad_ckpt_slat
+from tdfy.sam3d_v1.lidra.callback.tdfy.adaptive_gradient_clipping import AdaptiveGradientClipCallback
+from tdfy.sam3d_v1.lidra.callback.tdfy.gradual_grad_scale import GradualGradScaleCallback
+from tdfy.sam3d_v1.lidra.callback.tdfy.memory_manager import MemoryManagerCallback, set_grad_ckpt_slat
 
 
 class DummyLinearModel(pl.LightningModule):

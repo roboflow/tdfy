@@ -1,9 +1,9 @@
 import unittest
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.set import Set as FlexiSet
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.ops.lambda_ import Lambda
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.set import Set as FlexiSet
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.ops.lambda_ import Lambda
 
 
 class UnitTests(unittest.TestCase):

@@ -9,9 +9,9 @@ from typing import Union
 from PIL import Image
 from omegaconf import OmegaConf
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline import preprocess_utils
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_pipeline_pointmap import InferencePipelinePointMap
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_utils import (
+from tdfy.sam3d_v1.lidra.pipeline import preprocess_utils
+from tdfy.sam3d_v1.lidra.pipeline.inference_pipeline_pointmap import InferencePipelinePointMap
+from tdfy.sam3d_v1.lidra.pipeline.inference_utils import (
     get_pose_decoder,
     voxelize_mesh,
     preprocess_mesh,

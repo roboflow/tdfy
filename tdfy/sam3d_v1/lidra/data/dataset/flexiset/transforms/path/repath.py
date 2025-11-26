@@ -1,6 +1,6 @@
 import os
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base
 
 
 class Repath(Base):

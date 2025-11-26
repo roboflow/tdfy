@@ -10,7 +10,7 @@ from pytorch3d.ops import sample_points_from_meshes
 from pytorch3d.renderer import PerspectiveCameras
 from pytorch3d.structures import Meshes
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.base_obj_in_scene_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.base_obj_in_scene_dataset import (
     ObjInSceneSingleSceneDataset,
 )
 

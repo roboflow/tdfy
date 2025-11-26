@@ -1,8 +1,8 @@
 import unittest
 from torch.utils.data.dataset import IterableDataset, Dataset
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.transformed import Transformed
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.data.dataset.transformed import Transformed
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 
 
 class MockDataset(Dataset):

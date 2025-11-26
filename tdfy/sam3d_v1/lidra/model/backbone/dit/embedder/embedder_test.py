@@ -1,10 +1,10 @@
 import unittest
 import torch
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.dino import Dino
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.moge import MoGe
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.siglip2 import SigLIP2
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.embedder_fuser import EmbedderFuser
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.dino import Dino
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.moge import MoGe
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.siglip2 import SigLIP2
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.embedder_fuser import EmbedderFuser
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
 
 
 class UnitTests(unittest.TestCase):

@@ -26,11 +26,11 @@ from omegaconf import OmegaConf
 import numpy as np
 
 from PIL import Image
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline import preprocess_utils
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
+from tdfy.sam3d_v1.lidra.pipeline import preprocess_utils
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
     get_mask,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_utils import (
+from tdfy.sam3d_v1.lidra.pipeline.inference_utils import (
     get_pose_decoder,
     SLAT_MEAN,
     SLAT_STD,
@@ -38,15 +38,15 @@ from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_utils impor
     prune_sparse_structure,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.io import (
+from tdfy.sam3d_v1.lidra.model.io import (
     load_model_from_checkpoint,
     remove_prefix_state_dict_fn,
     add_prefix_state_dict_fn,
     filter_and_remove_prefix_state_dict_fn,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.modules import sparse as sp
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.modules import sparse as sp
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
 from safetensors.torch import load_file
 
 

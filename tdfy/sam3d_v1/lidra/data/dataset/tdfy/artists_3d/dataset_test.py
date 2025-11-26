@@ -2,15 +2,15 @@ import os
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.anything_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.anything_dataset import (
     AnythingDataset as Artist3DAnythingDataset,
     Artist3DAnythingSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import identity_pose
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset import Artist3DDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import identity_pose
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.artists_3d.dataset import Artist3DDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
 from torchvision.transforms import Compose, Resize
 
 

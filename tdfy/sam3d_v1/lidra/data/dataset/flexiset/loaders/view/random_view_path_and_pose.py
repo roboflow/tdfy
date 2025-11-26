@@ -1,8 +1,8 @@
 import os
 import random
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_trellis_pose
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_trellis_pose
 
 # COMMENT(Pierre) : Super ugly but keep for backwards compatibility. Will have to change.
 

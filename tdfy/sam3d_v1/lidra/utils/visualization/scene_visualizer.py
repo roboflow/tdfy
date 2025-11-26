@@ -5,15 +5,15 @@ from pytorch3d.renderer.cameras import PerspectiveCameras
 from pytorch3d.structures import Pointclouds
 from pytorch3d.transforms import quaternion_to_matrix
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import compose_transform
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.visualization.plotly.plot_scene import plot_tdfy_scene
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.visualization.image_mesh import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import compose_transform
+from tdfy.sam3d_v1.lidra.utils.visualization.plotly.plot_scene import plot_tdfy_scene
+from tdfy.sam3d_v1.lidra.utils.visualization.image_mesh import (
     mesh_from_pointmap,
     create_textured_mesh,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.visualization.plotly.plot_scene import NO_BACKGROUND, default_axisargs
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.visualization.plotly.save_scene import make_video as make_scene_video
+from tdfy.sam3d_v1.lidra.utils.visualization.plotly.plot_scene import NO_BACKGROUND, default_axisargs
+from tdfy.sam3d_v1.lidra.utils.visualization.plotly.save_scene import make_video as make_scene_video
 import seaborn as sns
 import copy
 

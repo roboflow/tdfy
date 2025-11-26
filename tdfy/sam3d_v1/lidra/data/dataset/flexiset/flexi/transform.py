@@ -1,6 +1,6 @@
 from typing import Dict, Any, Union, Sequence
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base as BaseTransform
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base as BaseTransform
 
 
 class Transform:

@@ -1,7 +1,7 @@
 import torch
 from timm.models.vision_transformer import PatchEmbed
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.mcc.common import (
+from tdfy.sam3d_v1.lidra.model.backbone.mcc.common import (
     Transformer,
     PositionalEncoding2D,
 )

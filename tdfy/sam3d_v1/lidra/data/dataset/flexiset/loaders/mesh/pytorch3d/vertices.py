@@ -1,6 +1,6 @@
 from pytorch3d.structures import Meshes
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
 
 
 class Vertices(Base):

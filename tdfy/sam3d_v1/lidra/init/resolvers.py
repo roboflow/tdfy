@@ -1,8 +1,8 @@
 import os
 import torch
 from omegaconf import DictConfig, OmegaConf, open_dict
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils import RecursivePartial
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.device import get_auto_device
+from tdfy.sam3d_v1.lidra.config.utils import RecursivePartial
+from tdfy.sam3d_v1.lidra.utils.device import get_auto_device
 
 
 def register(resolver_fn):

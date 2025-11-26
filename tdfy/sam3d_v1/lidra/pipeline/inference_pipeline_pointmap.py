@@ -1,5 +1,5 @@
 from typing import Union, Optional
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.pointmap import PointPatchEmbed
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.pointmap import PointPatchEmbed
 import numpy as np
 import torch
 from tqdm import tqdm
@@ -11,18 +11,18 @@ from PIL import Image
 
 from pytorch3d.transforms import Transform3d
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
+from tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
     get_mask,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import normalize_pointmap_ssi
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.utils.pointmap import infer_intrinsics_from_pointmap
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import normalize_pointmap_ssi
+from tdfy.sam3d_v1.lidra.pipeline.utils.pointmap import infer_intrinsics_from_pointmap
 from copy import deepcopy
 import open3d as o3d
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_utils import o3d_plane_estimation, estimate_plane_area
+from tdfy.sam3d_v1.lidra.pipeline.inference_utils import o3d_plane_estimation, estimate_plane_area
 
 
 def recursive_fn_factory(fn):

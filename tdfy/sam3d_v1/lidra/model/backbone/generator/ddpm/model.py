@@ -1,10 +1,10 @@
 from typing import Callable
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import Schedule
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.solver import Solver, Noise
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
+from tdfy.sam3d_v1.lidra.model.backbone.generator.base import Base
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import Schedule
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.solver import Solver, Noise
+from tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
 
 
 # https://arxiv.org/pdf/2006.11239

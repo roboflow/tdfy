@@ -12,7 +12,7 @@ import torch
 from pytorch3d.implicitron.dataset.dataset_base import FrameData
 from pytorch3d.ops import sample_points_from_meshes
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.hypersim_utils import read_h5py, read_img
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.hypersim_utils import read_h5py, read_img
 
 
 def hypersim_collate_fn(batch):

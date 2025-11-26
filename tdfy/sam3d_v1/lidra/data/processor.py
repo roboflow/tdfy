@@ -8,8 +8,8 @@ import numpy as np
 import math
 from tqdm import tqdm
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.io import touch, stdout_redirected, stderr_redirected
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import temporary_directory
+from tdfy.sam3d_v1.lidra.utils.io import touch, stdout_redirected, stderr_redirected
+from tdfy.sam3d_v1.lidra.test.util import temporary_directory
 
 
 class Processor:

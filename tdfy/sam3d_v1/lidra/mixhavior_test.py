@@ -1,8 +1,8 @@
 import unittest
 import pickle as pkl
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, temporary_file
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior as mixhavior
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, temporary_file
+import tdfy.sam3d_v1.lidra.mixhavior as mixhavior
 
 
 class A:

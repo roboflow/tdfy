@@ -8,7 +8,7 @@ from torch.utils.data import Dataset
 from typing import Union
 import matplotlib.pyplot as plt
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
     load_rgb,
     split_rgba,
     crop_around_mask_with_padding,

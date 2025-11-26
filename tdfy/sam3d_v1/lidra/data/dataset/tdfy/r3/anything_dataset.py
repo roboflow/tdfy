@@ -3,9 +3,9 @@ import os
 import torch
 from torch.utils.data import Dataset
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.dataset import R3Dataset, R3SampleID
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.dataset import R3Dataset, R3SampleID
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import (
     PerSubsetDataset as TrellisPerSubsetDataset,
 )
 

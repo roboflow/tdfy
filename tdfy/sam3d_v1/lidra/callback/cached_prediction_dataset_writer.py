@@ -5,8 +5,8 @@ from typing import List, Any, Tuple, Sequence, Optional, Callable, Union, Dict
 from lightning.pytorch.callbacks import BasePredictionWriter
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.collator import auto_uncollate, auto_collate
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.with_cached_predictions_dataset import (
+from tdfy.sam3d_v1.lidra.data.collator import auto_uncollate, auto_collate
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.with_cached_predictions_dataset import (
     WithCachedPredictionDataset,
 )
 

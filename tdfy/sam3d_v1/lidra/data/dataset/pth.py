@@ -4,7 +4,7 @@ import torch
 from torch.utils.data.dataset import Dataset
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
+from tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
 
 
 # shape2vec : /fsx-3dfy/shared/vae_features/3dShape2Vec/objaverse

@@ -6,18 +6,18 @@ from copy import deepcopy
 from typing import Callable, Optional
 from functools import partial
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.block.modulation import (
+from tdfy.sam3d_v1.lidra.model.backbone.dit.block.modulation import (
     Block as ModulationBlock,
     FinalBlock as FinalModulationBlock,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.block.cross_attn import (
+from tdfy.sam3d_v1.lidra.model.backbone.dit.block.cross_attn import (
     Block as CrossAttnBlock,
     FinalBlock as FinalCrossAttnBlock,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.image import ImageToTokens, TokensToImage
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.dino import Dino
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.label import LabelEmbedder
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.time import TimestepEmbedder
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.image import ImageToTokens, TokensToImage
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.dino import Dino
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.label import LabelEmbedder
+from tdfy.sam3d_v1.lidra.model.backbone.dit.embedder.time import TimestepEmbedder
 
 VALID_INPUT_TYPES = {"image", "tokens", "tokens+linear"}
 VALID_CONDITION_TYPES = {"none", "label", "image", "tokens", "dino"}

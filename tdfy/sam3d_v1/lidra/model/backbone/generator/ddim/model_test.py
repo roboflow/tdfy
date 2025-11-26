@@ -1,13 +1,13 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddim.model import DDIM
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import (
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddim.model import DDIM
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import (
     linear,
     Schedule,
     LinearSubSchedule,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 
 
 class UnitTests(unittest.TestCase):

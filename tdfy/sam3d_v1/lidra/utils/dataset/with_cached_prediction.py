@@ -13,13 +13,13 @@ from omegaconf import OmegaConf
 from hydra.utils import instantiate
 
 # Import and register resolvers before any config loading
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.init.resolvers  # This registers all custom resolvers
+import tdfy.sam3d_v1.lidra.init.resolvers  # This registers all custom resolvers
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.with_cached_predictions_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.with_cached_predictions_dataset import (
     WithCachedPredictionDataset,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.notebook.hydra import isolated_hydra_context
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra
+from tdfy.sam3d_v1.lidra.utils.notebook.hydra import isolated_hydra_context
+import tdfy.sam3d_v1.lidra
 from loguru import logger
 
 

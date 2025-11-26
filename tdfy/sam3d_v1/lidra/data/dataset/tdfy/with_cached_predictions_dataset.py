@@ -5,7 +5,7 @@ import pickle
 import torch
 from typing import Any, Union
 from tqdm import tqdm
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import SampleUuidUtils
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import SampleUuidUtils
 from loguru import logger
 
 

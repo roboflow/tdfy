@@ -5,18 +5,18 @@ from lightning.pytorch.utilities.model_summary import (
     LayerSummary,
     get_human_readable_count,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.optimizer.composite import Composite as CompositeOptimizer
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.scheduler.composite import Composite as CompositeScheduler
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.io import load_model_from_checkpoint
+from tdfy.sam3d_v1.lidra.optimizer.composite import Composite as CompositeOptimizer
+from tdfy.sam3d_v1.lidra.scheduler.composite import Composite as CompositeScheduler
+from tdfy.sam3d_v1.lidra.model.io import load_model_from_checkpoint
 import torch
 from loguru import logger
 import inspect
 from easydict import EasyDict
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.model import freeze
+from tdfy.sam3d_v1.lidra.config.model import freeze
 import peft
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.callback.tdfy.compute_metrics import MetricsCallback
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior as mixhavior
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior.pytorch import PyTorchMixhaviorStateDictHandling
+from tdfy.sam3d_v1.lidra.callback.tdfy.compute_metrics import MetricsCallback
+import tdfy.sam3d_v1.lidra.mixhavior as mixhavior
+from tdfy.sam3d_v1.lidra.mixhavior.pytorch import PyTorchMixhaviorStateDictHandling
 
 
 class ObjectOrCallable:

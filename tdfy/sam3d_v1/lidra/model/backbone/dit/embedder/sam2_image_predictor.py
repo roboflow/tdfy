@@ -4,8 +4,8 @@ import warnings
 from loguru import logger
 import numpy as np
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.build_sam import build_sam2_hf
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.sam2_image_predictor as sam2_image_predictor
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.build_sam import build_sam2_hf
+import tdfy.sam3d_v1.lidra.model.backbone.sam2.sam2_image_predictor as sam2_image_predictor
 
 
 class SAM2ImagePredictor(torch.nn.Module):

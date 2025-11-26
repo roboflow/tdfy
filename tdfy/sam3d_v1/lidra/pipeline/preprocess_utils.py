@@ -6,10 +6,10 @@ from functools import partial
 from PIL import Image
 
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
 from torchvision.transforms import Compose, Resize, InterpolationMode
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
     rembg,
     crop_around_mask_with_padding,
 )

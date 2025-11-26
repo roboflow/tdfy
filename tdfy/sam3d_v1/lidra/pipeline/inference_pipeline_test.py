@@ -6,7 +6,7 @@ from omegaconf import OmegaConf
 import os
 from PIL import Image
 import torch
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import (
+from tdfy.sam3d_v1.lidra.test.util import (
     run_unittest,
     run_only_if_path_exists,
     run_only_if_cuda_is_available,

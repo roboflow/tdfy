@@ -23,8 +23,8 @@ from ..img_processing import (
     random_pad,
     get_img_color_augmentation,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import get_rotation_about_x_axis
+from tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import get_rotation_about_x_axis
 
 from .latent_loader import (
     load_sparse_feature_latents,

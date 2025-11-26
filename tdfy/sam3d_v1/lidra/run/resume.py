@@ -2,8 +2,8 @@ import os
 from hydra.utils import instantiate
 from omegaconf import DictConfig, OmegaConf
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.run.common import run
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.io import get_last_checkpoint
+from tdfy.sam3d_v1.lidra.run.common import run
+from tdfy.sam3d_v1.lidra.model.io import get_last_checkpoint
 
 import rootutils
 

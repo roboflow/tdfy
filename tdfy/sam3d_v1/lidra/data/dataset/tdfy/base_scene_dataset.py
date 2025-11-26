@@ -3,8 +3,8 @@ import copy
 import numpy as np
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.hypersim_dataset import get_example_std, random_crop
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.hypersim_dataset import get_example_std, random_crop
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import (
     get_img_coords_grid,
     get_point_map,
     get_points_in_front_of_camera,

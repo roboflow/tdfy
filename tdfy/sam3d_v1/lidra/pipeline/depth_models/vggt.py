@@ -1,4 +1,4 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import preprocess_img
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import preprocess_img
 from .base import DepthModel
 import torch
 

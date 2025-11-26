@@ -10,10 +10,10 @@ import torch.nn.functional as F
 
 from torch.nn.init import trunc_normal_
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.mask_decoder import MaskDecoder
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.prompt_encoder import PromptEncoder
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.transformer import TwoWayTransformer
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import (
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.mask_decoder import MaskDecoder
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.prompt_encoder import PromptEncoder
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam.transformer import TwoWayTransformer
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import (
     get_1d_sine_pe,
     MLP,
     select_closest_cond_frames,

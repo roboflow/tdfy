@@ -9,8 +9,8 @@ import pytorch3d
 
 from pytorch3d.renderer.cameras import FoVPerspectiveCameras
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import get_rgbd_points
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.utils import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import get_rgbd_points
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.utils import (
     blender2pytorch3d,
     read_depth_channel,
     get_cam_transform,

@@ -1,8 +1,8 @@
 import unittest
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.processor import Processor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import temporary_directory
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.data.processor import Processor
+from tdfy.sam3d_v1.lidra.test.util import temporary_directory
 
 
 class UnitTests(unittest.TestCase):

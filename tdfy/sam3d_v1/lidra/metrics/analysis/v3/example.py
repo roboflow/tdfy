@@ -5,7 +5,7 @@ import pandas as pd
 import tempfile
 import os
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.analysis.v3 import MultiTrialConfig, MultiTrialProcessor
+from tdfy.sam3d_v1.lidra.metrics.analysis.v3 import MultiTrialConfig, MultiTrialProcessor
 
 
 def create_example_data():

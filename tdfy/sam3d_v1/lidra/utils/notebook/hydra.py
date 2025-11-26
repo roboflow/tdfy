@@ -8,7 +8,7 @@ from hydra.utils import instantiate
 from omegaconf import DictConfig, OmegaConf
 from loguru import logger
 
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra
+import tdfy.sam3d_v1.lidra
 
 
 class LidraConf:

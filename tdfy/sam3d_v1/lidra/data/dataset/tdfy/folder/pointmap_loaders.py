@@ -12,7 +12,7 @@ from pytorch3d.transforms import Transform3d
 from loguru import logger
 from typing import Optional
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
 
 
 def load_ply_pointmap(

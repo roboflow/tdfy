@@ -1,7 +1,7 @@
 import unittest
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.cadestate.dataset import Dataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.cadestate.dataset import Dataset
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
 
 
 class UnitTests(unittest.TestCase):

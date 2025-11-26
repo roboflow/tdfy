@@ -1,20 +1,20 @@
 import os
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import (
     PerSubsetDataset as OldTrellisDataset,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.dataset import FlexiDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_trellis_pose
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.flexi.loaders import all_loaders
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.flexi.transforms import all_transforms
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.dataset import FlexiDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import load_trellis_pose
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.flexi.loaders import all_loaders
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.flexi.transforms import all_transforms
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.metadata_filter import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.metadata_filter import (
     custom_metadata_filter,
     data_query_filter,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
 
 
 SUBSET_TO_KWARGS = {

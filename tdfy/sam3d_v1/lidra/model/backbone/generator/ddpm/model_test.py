@@ -1,9 +1,9 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.model import DDPM
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import linear, Schedule
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.model import DDPM
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import linear, Schedule
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 
 
 class UnitTests(unittest.TestCase):

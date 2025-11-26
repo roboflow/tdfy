@@ -16,7 +16,7 @@ from torch.utils.data import Dataset
 from PIL import Image
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
 
 # Define FolderSampleID as a simple string alias for now
 FolderSampleID = str

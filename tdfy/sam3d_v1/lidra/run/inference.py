@@ -2,7 +2,7 @@ from hydra.utils import instantiate
 from omegaconf import DictConfig, OmegaConf
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.run.common import run
+from tdfy.sam3d_v1.lidra.run.common import run
 import rootutils
 
 rootutils.setup_root(__file__, indicator=".project-root", dotenv=True, pythonpath=True)

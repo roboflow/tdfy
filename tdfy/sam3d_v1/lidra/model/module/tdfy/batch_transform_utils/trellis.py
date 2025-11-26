@@ -3,8 +3,8 @@ from .base import GenerativePreprocessing
 import torch
 from pytorch3d.renderer.cameras import FoVPerspectiveCameras
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import DiagonalGaussianDistribution
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.tdfy.util import camera_encoding
+from tdfy.sam3d_v1.lidra.model.backbone.autoencoder.vae import DiagonalGaussianDistribution
+from tdfy.sam3d_v1.lidra.model.module.tdfy.util import camera_encoding
 
 from lightning.pytorch.utilities.rank_zero import WarningCache, rank_zero_warn
 

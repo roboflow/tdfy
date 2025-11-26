@@ -1,7 +1,7 @@
 from typing import Union, Sequence, Dict
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.solver import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.loader import Loader as FlexiLoader
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.solver import (
     solve_loaders_ordering,
     solve_minimal_transforms,
 )

@@ -3,9 +3,9 @@ import torch
 from tqdm import tqdm
 from functools import partial
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.optimization import optimize
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor
+from tdfy.sam3d_v1.lidra.optimization import optimize
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
+from tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor
 
 
 class UnitTests(unittest.TestCase):

@@ -1,5 +1,5 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PreProcessor
 from typing import Optional, Tuple, Union
 
 # TODO(Pierre) clean, design a bit better ?

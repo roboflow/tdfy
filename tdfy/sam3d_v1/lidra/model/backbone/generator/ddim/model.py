@@ -1,9 +1,9 @@
 from typing import Callable
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.model import DDPM
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import Schedule
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.solver import Solver, Noise
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.model import DDPM
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.schedule import Schedule
+from tdfy.sam3d_v1.lidra.model.backbone.generator.ddpm.solver import Solver, Noise
 
 
 # https://arxiv.org/pdf/2010.02502

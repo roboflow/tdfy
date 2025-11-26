@@ -3,7 +3,7 @@ import torch
 from collections import namedtuple
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import to_device
+from tdfy.sam3d_v1.lidra.data.utils import to_device
 
 OptimizationState = namedtuple(
     "OptimizationState",

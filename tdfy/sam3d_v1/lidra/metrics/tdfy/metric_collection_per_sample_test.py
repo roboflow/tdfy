@@ -1,9 +1,9 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.metric_collection_per_sample import TdfyPerSample
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import (
+from tdfy.sam3d_v1.lidra.metrics.tdfy.metric_collection_per_sample import TdfyPerSample
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import (
     PoseTargetConverter,
     PoseTarget,
     InvariantPoseTarget,

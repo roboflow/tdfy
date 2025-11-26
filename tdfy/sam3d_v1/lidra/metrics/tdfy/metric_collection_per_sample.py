@@ -9,18 +9,18 @@ from pytorch3d.loss import chamfer_distance
 from pytorch3d.transforms import quaternion_to_matrix
 
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.metric_collection_for_sample import PerSample
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.pose.rotation import (
+from tdfy.sam3d_v1.lidra.metrics.metric_collection_for_sample import PerSample
+from tdfy.sam3d_v1.lidra.metrics.tdfy.pose.rotation import (
     rotation_angle,
     generate_90_deg_rotations,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.occupancy.pointcloud import (
+from tdfy.sam3d_v1.lidra.metrics.tdfy.occupancy.pointcloud import (
     create_occupancy_volume,
     chamfer_distance_icp_aligned,
     occupancy_grid_to_local_points,
     normalize_pcd,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.distance import (
+from tdfy.sam3d_v1.lidra.metrics.tdfy.distance import (
     abs_relative_error,
     abs_log_rel,
     delta1_acc,
@@ -28,7 +28,7 @@ from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.distance import (
     delta3_acc,
 )
 from loguru import logger
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import (
     PoseTargetConverter,
     PoseTarget,
     InvariantPoseTarget,

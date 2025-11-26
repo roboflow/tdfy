@@ -3,11 +3,11 @@ import torch
 from copy import deepcopy
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.callback.ema import EMACache
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, OverwriteTensorEquality, temporary_file
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.model import MockMLP
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior as mixhavior
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior.pytorch import PyTorchMixhaviorStateDictHandling
+from tdfy.sam3d_v1.lidra.callback.ema import EMACache
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, OverwriteTensorEquality, temporary_file
+from tdfy.sam3d_v1.lidra.test.model import MockMLP
+import tdfy.sam3d_v1.lidra.mixhavior as mixhavior
+from tdfy.sam3d_v1.lidra.mixhavior.pytorch import PyTorchMixhaviorStateDictHandling
 
 
 class UnitTests(unittest.TestCase):

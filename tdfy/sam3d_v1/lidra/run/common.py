@@ -3,8 +3,8 @@ import hydra
 from loguru import logger
 from omegaconf import DictConfig, OmegaConf
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.config.utils import dump_config
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.init.environment import init_env_variables
+from tdfy.sam3d_v1.lidra.config.utils import dump_config
+from tdfy.sam3d_v1.lidra.init.environment import init_env_variables
 
 
 def get_main_filename():

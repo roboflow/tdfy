@@ -2,8 +2,8 @@ import torch
 from loguru import logger
 from PIL import Image
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
+from tdfy.sam3d_v1.lidra.pipeline.inference_pipeline import InferencePipeline
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import postprocessing_utils
 
 
 class InferenceTextureSwapPipeline(InferencePipeline):

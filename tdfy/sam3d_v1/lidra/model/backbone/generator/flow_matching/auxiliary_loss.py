@@ -1,13 +1,13 @@
 from functools import partial
 import os
 import torch
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.visualization.object_pointcloud import save_points_to_ply
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.tdfy.metric_collection_per_sample import TdfyPerSample
+from tdfy.sam3d_v1.lidra.utils.visualization.object_pointcloud import save_points_to_ply
+from tdfy.sam3d_v1.lidra.metrics.tdfy.metric_collection_per_sample import TdfyPerSample
 from pytorch3d.transforms import quaternion_to_matrix
 from pytorch3d.loss import chamfer_distance
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.extensions.sinkhorn.sinkhorn import sinkhorn
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map
+from tdfy.sam3d_v1.lidra.model.backbone.extensions.sinkhorn.sinkhorn import sinkhorn
+from tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
+from tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map
 
 
 class PointCloudLoss(torch.nn.Module):

@@ -1,4 +1,4 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.run.common import run, dump_config
+from tdfy.sam3d_v1.lidra.run.common import run, dump_config
 from omegaconf import DictConfig
 import rootutils
 

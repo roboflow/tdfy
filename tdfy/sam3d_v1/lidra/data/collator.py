@@ -2,7 +2,7 @@ from typing import Optional, Callable, Any, Iterable
 import torch
 import optree
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import tree_transpose_level_one
+from tdfy.sam3d_v1.lidra.data.utils import tree_transpose_level_one
 
 
 def remove_empty_items_from_batch(batch):

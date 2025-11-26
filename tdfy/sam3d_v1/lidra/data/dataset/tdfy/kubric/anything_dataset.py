@@ -16,17 +16,17 @@ from typing import List, Dict, Optional, Union
 from torch.utils.data import Dataset
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.multi_obj_frame_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.multi_obj_frame_dataset import (
     KubricMultiObjInFrameDataset,
     KubricMultiObjInFrameDatasetSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import get_rgbd_points
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.point_cloud import get_rgbd_points
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import (
     compose_transform,
     decompose_transform,
     # normalize_points_to_unit_cube,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
     convert_to_decoupled_instance_pose,
 )
 from .utils import normalize_points_to_unit_cube

@@ -2,11 +2,11 @@ from collections import namedtuple
 from typing import List, Dict, Optional, Union
 from torch.utils.data import Dataset
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.hot3d.dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.hot3d.dataset import (
     HOT3DDataset,
     HOT3DDatasetSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import BoundingBoxError
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import BoundingBoxError
 from loguru import logger
 
 

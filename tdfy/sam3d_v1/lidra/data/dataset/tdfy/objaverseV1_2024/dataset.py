@@ -6,12 +6,12 @@ import torch
 from torch.utils.data import Dataset
 from typing import Union
 import matplotlib.pyplot as plt
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.utils import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.objaverse.utils import (
     read_depth_channel,
     blender2pytorch3d,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
     compute_mask_bbox,
     crop_and_pad,
 )

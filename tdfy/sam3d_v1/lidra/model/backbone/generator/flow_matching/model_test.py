@@ -1,11 +1,11 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.flow_matching.model import (
+from tdfy.sam3d_v1.lidra.model.backbone.generator.flow_matching.model import (
     FlowMatching,
     uniform_sampler,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest
+from tdfy.sam3d_v1.lidra.test.util import run_unittest
 import optree
 from loguru import logger
 from unittest.mock import Mock

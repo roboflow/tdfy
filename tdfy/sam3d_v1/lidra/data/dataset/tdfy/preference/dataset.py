@@ -10,8 +10,8 @@ from dataclasses import dataclass
 from typing import Callable, List
 from ..metadata_filter import custom_metadata_filter
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import identity_pose
+from tdfy.sam3d_v1.lidra.utils.decorators.counter import garbage_collect
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import identity_pose
 
 from ..trellis.dataset import PerSubsetDataset
 from .decode_mask import decode_mask

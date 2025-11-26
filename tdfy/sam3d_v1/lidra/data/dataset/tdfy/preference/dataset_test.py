@@ -9,17 +9,17 @@ from dataclasses import asdict
 import tempfile
 import shutil
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.preference.dataset import (
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.preference.dataset import (
     PreferenceMeshCandidate,
     PreferenceJobSample,
     PreferenceJobDataset,
     PreferenceJobDatasetForSFT,
     PerSubsetSampleID,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.metadata_filter import custom_metadata_filter
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import identity_pose
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.metadata_filter import custom_metadata_filter
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import identity_pose
 
 
 class MockLatentLoaderDataset:

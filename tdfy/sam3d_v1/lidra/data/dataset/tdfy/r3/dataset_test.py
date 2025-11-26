@@ -2,15 +2,15 @@ import os
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.dataset_deprecated import Dataset as Dataset_Deprecated
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.dataset import R3Dataset, R3SampleID
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.anything_dataset import AnythingDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.dataset_deprecated import Dataset as Dataset_Deprecated
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.dataset import R3Dataset, R3SampleID
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.r3.anything_dataset import AnythingDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import PerSubsetDataset, PreProcessor
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_processing import pad_to_square_centered
 from torchvision.transforms import Compose, Resize
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.metadata_filter import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.metadata_filter import (
     custom_metadata_filter,
     data_query_filter,
 )

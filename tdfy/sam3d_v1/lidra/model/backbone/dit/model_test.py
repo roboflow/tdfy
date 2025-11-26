@@ -1,7 +1,7 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.model import (
+from tdfy.sam3d_v1.lidra.model.backbone.dit.model import (
     DiT,
     ImageToTokens,
     LabelEmbedder,
@@ -11,7 +11,7 @@ from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.dit.model impor
     VALID_CONDITION_TYPES,
     VALID_INPUT_TYPES,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_cuda_is_available
 
 
 class UnitTests(unittest.TestCase):

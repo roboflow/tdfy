@@ -7,10 +7,10 @@ import open3d as o3d
 import trimesh
 from pytorch3d.structures import Meshes
 from pytorch3d.transforms import quaternion_to_matrix, Transform3d, matrix_to_quaternion
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import compose_transform, decompose_transform
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.transforms_3d import compose_transform, decompose_transform
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.pose_target import PoseTargetConverter
 from loguru import logger
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.pipeline.layout_post_optimization_utils import (
+from tdfy.sam3d_v1.lidra.pipeline.layout_post_optimization_utils import (
     run_ICP,
     compute_iou,
     set_seed,

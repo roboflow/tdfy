@@ -11,8 +11,8 @@ from pytorch3d.renderer import PerspectiveCameras
 from pytorch3d.transforms import Transform3d
 from scipy.spatial.transform import Rotation as R
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.dataset import OPENCV_TO_P3D_TRANSFORM3D
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.aria_digital_twin.dataset import OPENCV_TO_P3D_TRANSFORM3D
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import (
     convert_to_decoupled_instance_pose,
 )
 

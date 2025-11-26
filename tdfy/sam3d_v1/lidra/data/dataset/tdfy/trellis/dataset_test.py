@@ -5,17 +5,17 @@ import torch
 import lightning.pytorch as pl
 import lightning.pytorch.utilities.seed as pl_seed
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import TrellisDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.dataset import TrellisDataset
+from tdfy.sam3d_v1.lidra.test.util import (
     run_unittest,
     run_only_if_path_exists,
     OverwriteTensorEquality,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import IMAGENET_UNNORMALIZATION
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.anything_dataset import AnythingDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import IMAGENET_UNNORMALIZATION
+from tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.anything_dataset import AnythingDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import (
     extract_data,
     extract_sample_uuid,
 )
@@ -31,7 +31,7 @@ from pytorch3d.renderer import (
 )
 from pytorch3d.renderer.mesh.shader import HardDepthShader
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.flexi.datasets import trellis_from_old_dataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.flexi.datasets import trellis_from_old_dataset
 
 
 class UnitTests(unittest.TestCase):

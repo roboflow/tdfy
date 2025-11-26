@@ -9,9 +9,9 @@ from typing import Optional, Dict, Any, List, Union, Callable
 import torch
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, FrozenBackbone
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.collator import auto_uncollate, auto_collate
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_data, extract_sample_uuid
+from tdfy.sam3d_v1.lidra.model.module.base import Base, FrozenBackbone
+from tdfy.sam3d_v1.lidra.data.collator import auto_uncollate, auto_collate
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_data, extract_sample_uuid
 
 
 class InferenceWrapper(Base):

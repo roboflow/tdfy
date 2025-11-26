@@ -6,10 +6,10 @@ from functools import partial
 import optree
 import math
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map, tree_reduce_unique
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.generator.flow_matching.model import FlowMatching, _get_device
+from tdfy.sam3d_v1.lidra.model.backbone.generator.base import Base
+from tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
+from tdfy.sam3d_v1.lidra.data.utils import tree_tensor_map, tree_reduce_unique
+from tdfy.sam3d_v1.lidra.model.backbone.generator.flow_matching.model import FlowMatching, _get_device
 from torch.nn.attention import SDPBackend, sdpa_kernel
 from torch._utils import _flatten_dense_tensors, _unflatten_dense_tensors
 import copy

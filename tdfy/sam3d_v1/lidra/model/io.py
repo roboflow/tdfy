@@ -11,7 +11,7 @@ from lightning.pytorch.utilities.consolidate_checkpoint import (
 )
 from glob import glob
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import get_child, set_child
+from tdfy.sam3d_v1.lidra.data.utils import get_child, set_child
 
 
 # TODO(Pierre) : Make a version working as a "state_dict_fn" filter ?

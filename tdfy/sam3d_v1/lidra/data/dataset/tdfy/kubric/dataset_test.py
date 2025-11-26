@@ -1,16 +1,16 @@
 import unittest
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.dataset import KubricDataset
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.multi_obj_frame_dataset import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.dataset import KubricDataset
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.kubric.multi_obj_frame_dataset import (
     KubricMultiObjInFrameDataset,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
+from tdfy.sam3d_v1.lidra.test.util import run_unittest, run_only_if_path_exists
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import (
+from tdfy.sam3d_v1.lidra.utils.notebook.hydra import LidraConf
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.dataset_test_mixin import AnythingDatasetMixin
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import (
     extract_data,
     extract_sample_uuid,
 )

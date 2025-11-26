@@ -1,4 +1,4 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor, empty_mapping
+from tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor, empty_mapping
 
 
 class GenerativePreprocessing:

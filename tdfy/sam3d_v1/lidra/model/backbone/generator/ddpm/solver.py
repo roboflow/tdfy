@@ -1,6 +1,6 @@
 import torch
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
+from tdfy.sam3d_v1.lidra.data.utils import right_broadcasting
 
 
 class Solver:

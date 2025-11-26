@@ -4,8 +4,8 @@ from lightning.pytorch import Callback, LightningModule
 from loguru import logger
 from contextlib import contextmanager
 
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.mixhavior as mixhavior
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.model.hash import hash_module, diff_hashed_model
+import tdfy.sam3d_v1.lidra.mixhavior as mixhavior
+from tdfy.sam3d_v1.lidra.utils.model.hash import hash_module, diff_hashed_model
 
 
 class CannotEMAUpdate(RuntimeError):

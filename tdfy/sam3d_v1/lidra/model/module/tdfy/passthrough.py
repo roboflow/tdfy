@@ -3,9 +3,9 @@ from typing import Optional, Dict, Any, Tuple
 import skimage.io as io
 import os
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor, empty_mapping
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_sample_uuid, extract_data
+from tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
+from tdfy.sam3d_v1.lidra.data.utils import build_batch_extractor, empty_mapping
+from tdfy.sam3d_v1.lidra.data.dataset.return_type import extract_sample_uuid, extract_data
 
 
 class Passthrough(Base):

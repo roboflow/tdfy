@@ -1,7 +1,7 @@
 from copy import copy
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.transform import Transform as FlexiTransform
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.trellis.image_and_mask import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.transform import Transform as FlexiTransform
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.trellis.image_and_mask import (
     ImageAndMaskMess,
 )
 

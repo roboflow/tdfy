@@ -15,7 +15,7 @@ import os
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.optimizer.composite import Composite
+from tdfy.sam3d_v1.lidra.optimizer.composite import Composite
 
 
 class TestCompositeOptimizer(unittest.TestCase):

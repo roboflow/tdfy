@@ -11,7 +11,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import (
+from tdfy.sam3d_v1.lidra.model.backbone.sam2.modeling.sam2_utils import (
     DropPath,
     get_clones,
     LayerNorm2d,

@@ -6,10 +6,10 @@ import os
 import skimage
 
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.profiler.timeit import timeit
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.test.util import temporary_directory
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.io import stdout_redirected
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.singleton as singleton
+from tdfy.sam3d_v1.lidra.profiler.timeit import timeit
+from tdfy.sam3d_v1.lidra.test.util import temporary_directory
+from tdfy.sam3d_v1.lidra.utils.io import stdout_redirected
+import tdfy.sam3d_v1.lidra.utils.singleton as singleton
 
 
 def init_blender():

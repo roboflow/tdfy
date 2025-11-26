@@ -17,8 +17,8 @@ from panda3d.core import (
     PointLight,
 )
 
-import inference.models.sam3_3d.tdfy.sam3d_v1.lidra.utils.singleton as singleton
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.profiler.timeit import timeit
+import tdfy.sam3d_v1.lidra.utils.singleton as singleton
+from tdfy.sam3d_v1.lidra.profiler.timeit import timeit
 
 ENABLE_PBR = True
 DEBUG_MODE = False

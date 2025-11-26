@@ -5,7 +5,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from .full_attn import scaled_dot_product_attention
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import (
+from tdfy.sam3d_v1.lidra.data.utils import (
     tree_reduce_unique,
 )
 

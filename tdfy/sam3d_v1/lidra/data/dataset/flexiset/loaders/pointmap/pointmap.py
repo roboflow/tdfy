@@ -5,12 +5,12 @@ from PIL import Image
 from loguru import logger
 from pytorch3d.transforms import Transform3d
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.pytorch3d.ply_vertices_and_faces import (
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.mesh.pytorch3d.ply_vertices_and_faces import (
     PlyVerticesAndFaces,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.json.from_file import FromFile as Json
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.json.from_file import FromFile as Json
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.trellis.pose_loader import R3
 
 
 # COMMENT(Pierre) very ugly below, does a lot of stuff, will have to be refactored

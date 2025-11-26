@@ -11,15 +11,15 @@ from sklearn.metrics import (
     precision_recall_fscore_support,
 )
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.metrics.precision_recall import f1_beta_score
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.tdfy.util import (
+from tdfy.sam3d_v1.lidra.metrics.precision_recall import f1_beta_score
+from tdfy.sam3d_v1.lidra.model.module.base import Base, TrainableBackbone
+from tdfy.sam3d_v1.lidra.model.module.tdfy.util import (
     sample_uniform_box,
     grid_uniform_box,
     aug_xyz,
     binary_labels_from_point_distances,
 )
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.utils import tree_transpose_level_one
+from tdfy.sam3d_v1.lidra.data.utils import tree_transpose_level_one
 from loguru import logger
 
 NoiseContrastiveSampleWithRGB = namedtuple(

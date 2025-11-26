@@ -5,7 +5,7 @@ import os
 from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
+from tdfy.sam3d_v1.lidra.data.dataset.tdfy.img_and_mask_transforms import (
     load_rgb,
     split_rgba,
     RGBAImageProcessor,

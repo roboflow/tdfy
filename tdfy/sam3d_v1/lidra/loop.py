@@ -6,7 +6,7 @@ from loguru import logger
 import lightning.pytorch as pl
 from torch.utils.data import DataLoader
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.model.module.base import Base as ModuleBase
+from tdfy.sam3d_v1.lidra.model.module.base import Base as ModuleBase
 
 from lightning.pytorch.loggers import WandbLogger
 

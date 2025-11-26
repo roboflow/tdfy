@@ -1,10 +1,10 @@
 from typing import Dict, Any, Union, Sequence, Mapping
 from loguru import logger
 
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base as BaseLoader
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base as BaseTransform
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.transform import Transform as FlexiTransform
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.path.repath import Repath
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.loaders.base import Base as BaseLoader
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.base import Base as BaseTransform
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.flexi.transform import Transform as FlexiTransform
+from tdfy.sam3d_v1.lidra.data.dataset.flexiset.transforms.path.repath import Repath
 
 
 class _Dependencies:

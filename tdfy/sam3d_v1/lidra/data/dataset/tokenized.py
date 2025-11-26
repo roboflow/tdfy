@@ -1,4 +1,4 @@
-from inference.models.sam3_3d.tdfy.sam3d_v1.lidra.data.dataset.mapped import mapped
+from tdfy.sam3d_v1.lidra.data.dataset.mapped import mapped
 
 
 def tokenized(
