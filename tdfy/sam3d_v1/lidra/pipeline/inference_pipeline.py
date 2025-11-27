@@ -103,8 +103,10 @@ class InferencePipeline:
         slat_mean=SLAT_MEAN,
         slat_std=SLAT_STD,
         use_pretrained_ss=False,
+        dinov2_ckpt_path=None,  # Local path to DINOv2 checkpoint
     ):
         self.rendering_engine = rendering_engine
+        self.dinov2_ckpt_path = dinov2_ckpt_path
         self.device = torch.device(device)
         self.compile_model = compile_model
         self.compile_res = compile_res
@@ -503,8 +505,24 @@ class InferencePipeline:
             os.path.join(self.workspace_dir, ss_generator_config_path)
         )
         if "condition_embedder" in conf["module"]:
+            embedder_config = conf["module"]["condition_embedder"]["backbone"]
+
+            # Inject dinov2_ckpt_path into Dino embedders if provided
+            if self.dinov2_ckpt_path is not None and "embedder_list" in embedder_config:
+                for embedder_entry in embedder_config["embedder_list"]:
+                    if len(embedder_entry) > 0:
+                        embedder_cfg = embedder_entry[0]
+                        if (
+                            "_target_" in embedder_cfg
+                            and "dino.Dino" in embedder_cfg["_target_"]
+                        ):
+                            embedder_cfg["checkpoint_path"] = self.dinov2_ckpt_path
+                            logger.info(
+                                f"Injected dinov2_ckpt_path into Dino embedder: {self.dinov2_ckpt_path}"
+                            )
+
             return self.instantiate_and_load_from_pretrained(
-                conf["module"]["condition_embedder"]["backbone"],
+                embedder_config,
                 os.path.join(self.workspace_dir, ss_generator_ckpt_path),
                 state_dict_fn=filter_and_remove_prefix_state_dict_fn(
                     "_base_models.condition_embedder."

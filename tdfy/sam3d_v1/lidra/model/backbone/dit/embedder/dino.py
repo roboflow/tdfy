@@ -1,9 +1,12 @@
+import os
 import torch
 from typing import Optional, Dict, Any
 import warnings
 from torchvision.transforms import Normalize
 import torch.nn.functional as F
 from loguru import logger
+
+from tdfy.hub.facebookresearch_dinov2_main.dinov2.hub import backbones as dinov2_backbones
 
 
 class Dino(torch.nn.Module):
@@ -19,6 +22,7 @@ class Dino(torch.nn.Module):
         prenorm_features: bool = False,
         freeze_backbone: bool = True,
         prune_network: bool = False,  # False for backward compatible
+        checkpoint_path: Optional[str] = None,  # Local checkpoint path (overridable via config)
     ):
         super().__init__()
         if backbone_kwargs is None:
@@ -27,19 +31,47 @@ class Dino(torch.nn.Module):
         with warnings.catch_warnings():
             warnings.simplefilter("ignore")
 
-            logger.info(
-                f"Loading DINO model: {dino_model} from {repo_or_dir} (source: {source})"
-            )
-            if backbone_kwargs:
-                logger.info(f"DINO backbone kwargs: {backbone_kwargs}")
+            if checkpoint_path is not None:
+                # Load from local checkpoint
+                logger.info(
+                    f"Loading DINO model: {dino_model} from local checkpoint: {checkpoint_path}"
+                )
+                if backbone_kwargs:
+                    logger.info(f"DINO backbone kwargs: {backbone_kwargs}")
 
-            self.backbone = torch.hub.load(
-                repo_or_dir=repo_or_dir,
-                model=dino_model,
-                source=source,
-                verbose=False,
-                **backbone_kwargs,
-            )
+                # Get the model function from dinov2 backbones
+                if not hasattr(dinov2_backbones, dino_model):
+                    raise ValueError(
+                        f"Unknown dino_model: {dino_model}. "
+                        f"Available: {[k for k in dir(dinov2_backbones) if k.startswith('dinov2_')]}"
+                    )
+                model_fn = getattr(dinov2_backbones, dino_model)
+
+                # Create model without pretrained weights
+                self.backbone = model_fn(pretrained=False, **backbone_kwargs)
+
+                # Load state dict from local checkpoint
+                if not os.path.exists(checkpoint_path):
+                    raise FileNotFoundError(
+                        f"DINO checkpoint not found: {checkpoint_path}"
+                    )
+                state_dict = torch.load(checkpoint_path, map_location="cpu", weights_only=True)
+                self.backbone.load_state_dict(state_dict, strict=True)
+            else:
+                # Original behavior: load from torch hub
+                logger.info(
+                    f"Loading DINO model: {dino_model} from {repo_or_dir} (source: {source})"
+                )
+                if backbone_kwargs:
+                    logger.info(f"DINO backbone kwargs: {backbone_kwargs}")
+
+                self.backbone = torch.hub.load(
+                    repo_or_dir=repo_or_dir,
+                    model=dino_model,
+                    source=source,
+                    verbose=False,
+                    **backbone_kwargs,
+                )
 
             # Log model properties after loading
             logger.info(
