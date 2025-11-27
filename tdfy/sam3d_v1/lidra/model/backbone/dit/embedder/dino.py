@@ -5,8 +5,7 @@ import warnings
 from torchvision.transforms import Normalize
 import torch.nn.functional as F
 from loguru import logger
-
-from tdfy.hub.facebookresearch_dinov2_main.dinov2.hub import backbones as dinov2_backbones
+from importlib.resources import files
 
 
 class Dino(torch.nn.Module):
@@ -32,23 +31,26 @@ class Dino(torch.nn.Module):
             warnings.simplefilter("ignore")
 
             if checkpoint_path is not None:
-                # Load from local checkpoint
+                # Load from local checkpoint using local dinov2 hub
                 logger.info(
                     f"Loading DINO model: {dino_model} from local checkpoint: {checkpoint_path}"
                 )
                 if backbone_kwargs:
                     logger.info(f"DINO backbone kwargs: {backbone_kwargs}")
 
-                # Get the model function from dinov2 backbones
-                if not hasattr(dinov2_backbones, dino_model):
-                    raise ValueError(
-                        f"Unknown dino_model: {dino_model}. "
-                        f"Available: {[k for k in dir(dinov2_backbones) if k.startswith('dinov2_')]}"
-                    )
-                model_fn = getattr(dinov2_backbones, dino_model)
+                # Get path to local dinov2 directory
+                import tdfy.hub
+                local_dinov2_dir = str(files(tdfy.hub) / "facebookresearch_dinov2_main")
 
-                # Create model without pretrained weights
-                self.backbone = model_fn(pretrained=False, **backbone_kwargs)
+                # Load model architecture without pretrained weights using local source
+                self.backbone = torch.hub.load(
+                    repo_or_dir=local_dinov2_dir,
+                    model=dino_model,
+                    source="local",
+                    verbose=False,
+                    pretrained=False,
+                    **backbone_kwargs,
+                )
 
                 # Load state dict from local checkpoint
                 if not os.path.exists(checkpoint_path):
