@@ -1,34 +1,15 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 import os
 
-# not ideal to put that here
-os.environ["CUDA_HOME"] = os.environ["CONDA_PREFIX"]
-os.environ["LIDRA_SKIP_INIT"] = "true"
-
-import sys
-from typing import Union, Optional, List, Callable
 import numpy as np
 from PIL import Image
-from omegaconf import OmegaConf, DictConfig, ListConfig
-from hydra.utils import instantiate, get_method
 import torch
 import math
 import utils3d
-import shutil
-import subprocess
-import seaborn as sns
 from PIL import Image
 import numpy as np
-import gradio as gr
-import matplotlib.pyplot as plt
 from copy import deepcopy
-from kaolin.visualize import IpyTurntableVisualizer
-from kaolin.render.camera import Camera, CameraExtrinsics, PinholeIntrinsics
-import builtins
 from pytorch3d.transforms import quaternion_multiply, quaternion_invert
-
-import sam3d_objects  # REMARK(Pierre) : do not remove this import
-from sam3d_objects.pipeline.inference_pipeline_pointmap import InferencePipelinePointMap
 from sam3d_objects.model.backbone.tdfy_dit.utils import render_utils
 
 from sam3d_objects.utils.visualization import SceneVisualizer
