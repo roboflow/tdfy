@@ -10,9 +10,10 @@ from PIL import Image
 import numpy as np
 from copy import deepcopy
 from pytorch3d.transforms import quaternion_multiply, quaternion_invert
-from sam3d_objects.model.backbone.tdfy_dit.utils import render_utils
+from tdfy.sam3d_v1.lidra.model.backbone.trellis.utils import render_utils
 
-from sam3d_objects.utils.visualization import SceneVisualizer
+from tdfy.sam3d_v1.lidra.utils.visualization import SceneVisualizer
+
 
 def _yaw_pitch_r_fov_to_extrinsics_intrinsics(yaws, pitchs, rs, fovs):
     is_list = isinstance(yaws, list)
